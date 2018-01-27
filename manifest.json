@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "name": "MeBun Replacer",
+  "version": "1.0",
+  "description": "Replaces Facebook stickers with custom stickers in Facebook chats.",
+  "icons": {
+    "16": "images/mebun16.png",
+    "48": "images/mebun48.png",
+    "128": "images/mebun128.png"
+    },
