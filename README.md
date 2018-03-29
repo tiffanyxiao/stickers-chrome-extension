@@ -10,5 +10,6 @@ In this chrome extension, we will be replacing the "Cut the Rope" sticker pack a
 -Make the images change on the choosing stickers page    
 -Find a better event to use for the addEventListener    
 -Add the ability to disable the extension    
--Add Apple stickers    
+-Add Apple stickers
+-Figure out GIFS    
 -[Optional] Add secret item    
