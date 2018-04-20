@@ -1,21 +1,28 @@
-document.addEventListener('mousedown', function(){
+
+
+let stickersMap = new Map();
+stickersMap.set('551710711530727','images/mebun1.png');
+stickersMap.set('551710701530728','images/mebun2.png');
+stickersMap.set('551710694864062','images/mebun3.png');
+stickersMap.set('551710684864063','images/logo.png');
+
+let generateAttribute = function(s) {
+	let k = chrome.extension.getURL(s)
+	return "background-image: url(" + k + "); background-repeat: no-repeat; background-size: 120px 120px; cursor: pointer; height: 120px; width: 120px;)";
+};
+
+let replaceStickers = function() {
 	var list = document.getElementsByClassName("_2poz _ui9");
-	console.log("changeImage()");
 
 	//can add more stickers in the same format
 	for (i = 0; i < list.length; i++) {
-		if (list[i].style["background-image"] == "url(\"/stickers/asset/?sticker_id=551710711530727&image_type=BestEffortImage\")") {
-			list[i].setAttribute("style", "background-image: url(\"https://i.imgur.com/7Ix7cfw.png\"); background-repeat: no-repeat; background-size: 120px 120px; cursor: pointer; height: 120px; width: 120px;)");
-		}
-		if (list[i].style["background-image"] == "url(\"/stickers/asset/?sticker_id=551710701530728&image_type=BestEffortImage\")") {
-			list[i].setAttribute("style", "background-image: url(\"https://i.imgur.com/v2OkVQd.png\"); background-repeat: no-repeat; background-size: 120px 120px; cursor: pointer; height: 120px; width: 120px;)");
-		}
-		if (list[i].style["background-image"] == "url(\"/stickers/asset/?sticker_id=551710694864062&image_type=BestEffortImage\")") {
-			list[i].setAttribute("style", "background-image: url(\"https://i.imgur.com/3JMolm4.png\"); background-repeat: no-repeat; background-size: 120px 120px; cursor: pointer; height: 120px; width: 120px;)");
+		for (let key of stickersMap.keys()) {
+			if (list[i].style["background-image"].includes(key)) {
+				list[i].setAttribute("style", generateAttribute(stickersMap.get(key)));
+			}
 		}
 	}
-}, false);
+};
 
-//https://i.imgur.com/3JMolm4.png
-//https://i.imgur.com/v2OkVQd.png
-//https://i.imgur.com/7Ix7cfw.png
+window.onload = replaceStickers;
+document.addEventListener('mousedown', replaceStickers);
