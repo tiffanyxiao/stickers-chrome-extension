@@ -15,7 +15,7 @@
   "content_scripts":
   [
     {
-      "matches": ["*://*/*"],
+      "matches": ["*://*.facebook.com/*", "*://*.messenger.com/*"],
       "js": ["myscript.js"],
       "run_at": "document_end"
     }
