@@ -5,6 +5,7 @@ stickersMap.set('551710711530727','images/mebun1.png');
 stickersMap.set('551710701530728','images/mebun2.png');
 stickersMap.set('551710694864062','images/mebun3.png');
 stickersMap.set('551710684864063','images/logo.png');
+stickersMap.set('551710668197398','images/apple1.png');
 
 let generateAttribute = function(s) {
 	let k = chrome.extension.getURL(s)
