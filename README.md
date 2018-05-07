@@ -13,3 +13,6 @@ In this chrome extension, we will be replacing the "Cut the Rope" sticker pack a
 - [x] Add Apple stickers
 - [ ] Support GIFS    
 - [ ] Add secret item    ????? what does this mean
+
+# Extension in Use
+![Extension in Use on Facebook](https://raw.githubusercontent.com/tiffanyxiao/stickers-chrome-extension/master/images/sample1.png)
