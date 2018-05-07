@@ -11,5 +11,5 @@ In this chrome extension, we will be replacing the "Cut the Rope" sticker pack a
 - [x] Find a better event to use for the addEventListener    
 - [ ] Add the ability to disable the extension    
 - [x] Add Apple stickers
-- [ ] Figure out GIFS    
+- [ ] Support GIFS    
 - [ ] Add secret item    ????? what does this mean
